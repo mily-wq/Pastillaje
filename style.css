@@ -1,143 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-
-    font-family: Arial, sans-serif;
-
-    background-color: #f7e9f0;
-
-    text-align: center;
-
-    margin: 0;
-
-    padding: 0;
-
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  color: #593747;
+  line-height: 1.7;
 }
 
-
-section {
-
-    min-height: 100vh;
-
-    box-sizing: border-box;
-
-    padding: 80px 30px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
+header {
+  background: #d879a0;
+  color: white;
+  text-align: center;
+  padding: 30px 16px;
 }
 
-
-.oculto {
-
-    display: none;
-
+header h1 {
+  margin: 0;
+  font-size: 30px;
 }
 
-
-h1 {
-
-    color: #8e3a65;
-
-    font-size: 40px;
-
-    margin-bottom: 25px;
-
+header p {
+  margin-bottom: 0;
 }
 
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.seccion {
+  display: none;
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px #00000012;
+  text-align: center;
+}
+
+.seccion.activa {
+  display: block;
+  animation: aparecer 0.4s ease;
+}
 
 h2 {
-
-    color: #8e3a65;
-
+  color: #c05282;
 }
 
-
-p {
-
-    color: #444;
-
-    font-size: 20px;
-
-    line-height: 1.6;
-
-    max-width: 750px;
-
+ul, ol {
+  display: inline-block;
+  text-align: left;
+  max-width: 100%;
 }
 
+.imagen {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  max-height: 350px;
+  object-fit: contain;
+  margin: 24px auto;
+  border-radius: 14px;
+}
 
 button {
-
-    background-color: #8e3a65;
-
-    color: white;
-
-    border: none;
-
-    padding: 15px 25px;
-
-    margin: 10px;
-
-    border-radius: 10px;
-
-    font-size: 18px;
-
-    cursor: pointer;
-
+  background: #d879a0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  margin-top: 15px;
+  font-size: 16px;
+  cursor: pointer;
 }
-
 
 button:hover {
-
-    background-color: #6d2b4d;
-
+  background: #b84d7b;
 }
 
-
-.imagen-interactiva {
-
-    width: 300px;
-
-    max-width: 90%;
-
-    border-radius: 15px;
-
-    cursor: pointer;
-
-    margin: 20px;
-
-    transition: transform 0.3s;
-
+footer {
+  text-align: center;
+  padding: 18px;
+  color: #87546c;
 }
 
-
-.imagen-interactiva:hover {
-
-    transform: scale(1.05);
-
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
 
-.texto-clic {
+  main {
+    width: 94%;
+    margin: 18px auto;
+  }
 
-    font-size: 16px;
-
-    font-weight: bold;
-
+  .seccion {
+    padding: 20px 16px;
+  }
 }
-
-
-.info-imagen {
-
-    background-color: white;
-
-    padding: 15px 25px;
-
-    border-radius: 15px;
 
     max-width: 700px;
 
